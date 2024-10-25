@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../users/damhiya
+    ../../users/high
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -57,7 +61,8 @@
     vim
     wget
     git
-    htop scripts.nixos-profile
+    htop
+    scripts.nixos-profile
   ];
 
   services = {
