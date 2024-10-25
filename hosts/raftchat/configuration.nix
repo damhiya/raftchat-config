@@ -17,6 +17,7 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [
+        80
         443
         10022
         9001
@@ -56,6 +57,7 @@
     vim
     wget
     git
+    htop scripts.nixos-profile
   ];
 
   services = {
