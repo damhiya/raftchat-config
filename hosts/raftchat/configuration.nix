@@ -54,6 +54,7 @@
     scripts.nixos-profile
   ];
 
+  virtualisation.docker.enable = true;
   services = {
     openssh = {
       enable = true;

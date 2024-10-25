@@ -6,6 +6,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
+      "docker"
     ];
     packages = [ pkgs.fish ];
   };
