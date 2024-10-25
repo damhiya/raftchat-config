@@ -2,9 +2,10 @@
 
 {
   imports = [
-    ./hardware-configuration.nix
+    ../../modules/home-manager.nix
     ../../users/damhiya
     ../../users/high
+    ./hardware-configuration.nix
   ];
 
   boot.loader.systemd-boot.enable = true;

@@ -9,4 +9,11 @@
     ];
     packages = [ pkgs.fish ];
   };
+
+  home-manager.users.damhiya = {
+    imports = [ ];
+    home.username = "damhiya";
+    home.homeDirectory = "/home/damhiya";
+    home.stateVersion = "24.05";
+  };
 }
