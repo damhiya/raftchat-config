@@ -39,18 +39,6 @@
   time.timeZone = "Asia/Seoul";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  users.users = {
-    paxos = {
-      isNormalUser = true;
-      description = "paxos";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-      packages = with pkgs; [ ];
-    };
-  };
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
