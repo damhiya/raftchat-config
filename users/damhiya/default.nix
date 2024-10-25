@@ -11,7 +11,7 @@
   };
 
   home-manager.users.damhiya = {
-    imports = [ ];
+    imports = [ ./programs ];
     home.username = "damhiya";
     home.homeDirectory = "/home/damhiya";
     home.stateVersion = "24.05";
