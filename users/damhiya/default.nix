@@ -7,5 +7,6 @@
       "wheel"
       "networkmanager"
     ];
+    packages = [ pkgs.fish ];
   };
 }
