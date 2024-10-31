@@ -34,12 +34,25 @@
       };
     in
     {
-      nixosConfigurations.raftchat = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          baseModule
-          ./hosts/raftchat/configuration.nix
-        ];
+      nixosConfigurations = {
+        raftchat1 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            baseModule
+            ./common/configuration.nix
+            ./hosts/raftchat1/hardware-configuration.nix
+            { networking.hostName = "raftchat1"; }
+          ];
+        };
+        raftchat2 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            baseModule
+            ./common/configuration.nix
+            ./hosts/raftchat2/hardware-configuration.nix
+            { networking.hostName = "raftchat2"; }
+          ];
+        };
       };
     };
 }

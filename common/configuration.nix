@@ -2,16 +2,14 @@
 
 {
   imports = [
-    ../../modules/home-manager.nix
-    ../../users/damhiya
-    ../../users/high
-    ./hardware-configuration.nix
+    ../modules/home-manager.nix
+    ../users/damhiya
+    ../users/high
   ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "raftchat";
   networking = {
     nameservers = [
       "1.1.1.1"
