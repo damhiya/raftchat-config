@@ -71,6 +71,7 @@
     # development
     vim
     git
+    github-runner
   ];
 
   virtualisation.docker.enable = true;
