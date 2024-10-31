@@ -57,6 +57,7 @@
 
     # system management
     htop
+    btop
     pstree
     killall
     tree
