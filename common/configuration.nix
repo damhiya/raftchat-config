@@ -45,11 +45,32 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim
+    # compressors
+    zip
+    unzipNLS
+    zstd
+    lz4
+    p7zip
+
+    # network
     wget
-    git
+
+    # system management
     htop
+    pstree
+    killall
+    tree
+    tmux
+    bat
+    silver-searcher
+    delta
+    duf
+    fastfetch
     scripts.nixos-profile
+
+    # development
+    vim
+    git
   ];
 
   virtualisation.docker.enable = true;
