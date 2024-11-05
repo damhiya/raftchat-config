@@ -53,6 +53,15 @@
             { networking.hostName = "raftchat2"; }
           ];
         };
+        raftchat3 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            baseModule
+            ./common/configuration.nix
+            ./hosts/raftchat3/hardware-configuration.nix
+            { networking.hostName = "raftchat3"; }
+          ];
+        };
       };
     };
 }
