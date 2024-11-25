@@ -50,6 +50,7 @@
   ];
   nixpkgs.config.allowUnfree = true;
 
+  environment.variables.EDITOR = "vim";
   environment.systemPackages = with pkgs; [
     # compressors
     zip
